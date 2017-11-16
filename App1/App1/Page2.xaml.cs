@@ -33,20 +33,36 @@ namespace App1
                 new Phone {Title="iPhone 7", Company="Apple", Price=52000 }
             };
             this.BindingContext = this;
-        }
+            //phonesList.ItemSelected += SelectedItem;
+            phonesList.ItemSelected += async (sender, e) =>
+            {
+                if (e.SelectedItem != null)
+                {
+                    string selectedItem = e.SelectedItem.ToString();
 
-        public async void SelectedItem(object sender, SelectedItemChangedEventArgs e)
-        {
-            Phone selectedPhone = e.SelectedItem as Phone;
-            if (selectedPhone != null)
-                await Application.Current.MainPage.Navigation.PushAsync(new Page4());
-        }
+                    // clear selected item
+                    phonesList.SelectedItem = null;
 
-        //public async void OnItemTapped(object sender, ItemTappedEventArgs e)
-        //{
-        //    Phone selectedPhone = e.Item as Phone;
-        //    if (selectedPhone != null)
-        //        await DisplayAlert("Выбранная модель", $"{selectedPhone.Company} - {selectedPhone.Title}", "OK");
-        //}
+                    //var detailsPage = new ItemDetails(selectedItem);
+                    await Navigation.PushAsync(new Page4());
+                }
+            };
+
+
+            //public async void SelectedItem(object sender, SelectedItemChangedEventArgs e)
+            //        {
+            //            Phone selectedPhone = e.SelectedItem as Phone;
+            //            if (selectedPhone != null)
+            //                await Application.Current.MainPage.Navigation.PushAsync(new Page4());
+            //        }
+
+            //public async void OnItemTapped(object sender, ItemTappedEventArgs e)
+            //{
+            //    Phone selectedPhone = e.Item as Phone;
+            //    if (selectedPhone != null)
+            //        await DisplayAlert("Выбранная модель", $"{selectedPhone.Company} - {selectedPhone.Title}", "OK");
+            //}
+
+        }
     }
 }
