@@ -3,28 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.MasterPage"
              Title="Master Page">
-    <ContentPage.Content BackgroundColor="#cc0061">
-        <StackLayout>
-        <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem.Title}"
-            FontSize="Large" />
-        <ListView x:Name="phonesList"
+    <ContentPage.Content>
+        <StackLayout Padding="5,5,5,5" BackgroundColor="#cc0061" Spacing="15" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="Icon.png" VerticalOptions="Center"></Image>
+                <Label Text="Добро пожаловать в UrFUActiv!" FontSize="Medium" XAlign="Center" VerticalOptions="Center" TextColor="White"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="White">
+                <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem.Title}"
+              FontSize="Large" />
+                <ListView x:Name="infoList"
               HasUnevenRows="True"
-              ItemsSource="{Binding Phones}"
-              ItemTapped="OnItemTapped">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout>
-                                <Label Text="{Binding Company}" FontSize="18" />
-                                <Label Text="{Binding Title}" />
-                                <Label Text="{Binding Price}" />
-                            </StackLayout>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+              ItemsSource="{Binding Info}"
+              SelectedItem="SelectedItem">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Label Text="{Binding Label}" FontSize="18"/>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
