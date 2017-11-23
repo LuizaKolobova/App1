@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Info"
+             Title="Информация">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="О приложении" FontSize="20" TextColor="#cc0061" XAlign="Center" 
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Логотип-Изображение для приложения. Размер: 1024 x 1024 пикселя.Подробное описание:Объясните, как работает приложение и для чего нужны функции, которые мы будем проверять.Политика конфиденциальности.Доступный URL сайта, на котором размещена информация о политике конфиденциальности." XAlign="Center" ></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

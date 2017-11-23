@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:App1;assembly:App1"
              x:Class="App1.DetailPage"
              Title="UrFU Activ">
-    <TabbedPage.Children>
-        <local:Page2  />
-        <local:Page3  />
+    <TabbedPage.Children >
+        <local:NewsList />
+        <local:EventsList  />
     </TabbedPage.Children>
 </TabbedPage>

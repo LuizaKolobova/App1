@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Page4 : ContentPage
+	public partial class Authorization : ContentPage
 	{
-		public Page4 ()
+		public Authorization ()
 		{
-            
-            InitializeComponent ();
+			InitializeComponent ();
 		}
 	}
 }

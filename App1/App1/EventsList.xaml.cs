@@ -10,10 +10,10 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page3 : ContentPage
+    public partial class EventsList : ContentPage
     {
         public List<Phone> Phones { get; set; }
-        public Page3()
+        public EventsList()
         {
             InitializeComponent();
             //определяем список элементов направления

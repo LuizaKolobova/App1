@@ -3,52 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.MasterPage"
              Title="Master Page">
-    <ContentPage.Content>
-        <StackLayout Padding="5,5,5,5" BackgroundColor="#cc0061" Spacing="15" >
+    <ContentPage.Content >
+        <StackLayout Padding="7,15,0,7" Spacing="15" BackgroundColor="White" >
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="Icon.png" VerticalOptions="Center"></Image>
-                <Label Text="Добро пожаловать в UrFUActiv!" FontSize="25" XAlign="Center" VerticalOptions="Center" TextColor="White"/>
+                <Label Text="Добро пожаловать в UrFUActiv!" FontSize="23" XAlign="Center" VerticalOptions="Center" TextColor="#cc0061"/>
             </StackLayout>
-            <StackLayout>
-                <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem.Title}"
-            FontSize="Large" />
-                <ListView x:Name="phonesList"
-              HasUnevenRows="True"
-              ItemsSource="{Binding Phones}"
-              SelectedItem="SelectedItem">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <StackLayout>
-                                        <Label Text="{Binding Company}" FontSize="18" />
-                                        <Label Text="{Binding Title}" />
-                                        <Label Text="{Binding Price}" />
-                                    </StackLayout>
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-
-            <!--<StackLayout>
-                <ListView x:Name="infoList" 
+            <ListView x:Name="infoList" VerticalOptions="CenterAndExpand"
+              SeparatorVisibility="None"
               HasUnevenRows="True"
               ItemsSource="{Binding Information}"
-              SelectedItem="SelectedItem">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.View>
-                                    <Label Text="{Binding Title}" FontSize="20" TextColor="White"/>
-                                    --><!--<Image Source="{Binding Image}" WidthRequest="35" HeightRequest="35" Aspect="AspectFit" ></Image>--><!--
-                                </ViewCell.View>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>-->
+              SelectedItem="SelectedItem"
+              BackgroundColor="White" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Label Text="{Binding Title}" FontSize="21" TextColor="#cc0061" HeightRequest="35"/>
+                                <!--<Image Source="{Binding Image}" WidthRequest="35" HeightRequest="35" Aspect="AspectFit" ></Image>-->
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

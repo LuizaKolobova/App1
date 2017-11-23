@@ -17,11 +17,11 @@ namespace App1
     }
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page2 : ContentPage
+    public partial class NewsList : ContentPage
     {
 
         public List<Phone> Phones { get; set; }
-        public Page2()
+        public NewsList()
         {
 
             InitializeComponent();

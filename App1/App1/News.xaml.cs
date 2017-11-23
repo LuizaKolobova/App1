@@ -9,12 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace App1
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class News : ContentPage
-	{
-		public News ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class News : TabbedPage
+    {
+        public News ()
+        {
+            BarBackgroundColor = Color.FromHex("#cc0061");
+            InitializeComponent();
+        }
+    }
 }

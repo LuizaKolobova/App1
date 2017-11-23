@@ -10,10 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DirectionsTabbedPaged : TabbedPage
+    public partial class Directions : TabbedPage
     {
-        public DirectionsTabbedPaged ()
+        
+        public Directions ()
         {
+            BarBackgroundColor = Color.FromHex("#cc0061");
             InitializeComponent();
         }
     }
