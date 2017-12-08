@@ -4,10 +4,9 @@
              x:Class="App1.MasterPage"
              Title="Master Page">
     <ContentPage.Content >
-        <StackLayout Padding="7,15,0,7" Spacing="15" BackgroundColor="White" >
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" Source="Icon.png" VerticalOptions="Center"></Image>
-                <Label Text="Добро пожаловать в UrFUActiv!" FontSize="23" XAlign="Center" VerticalOptions="Center" TextColor="#cc0061"/>
+        <StackLayout Padding="0,0,0,0" Spacing="10" BackgroundColor="White">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+                <Image Source="background.png" HorizontalOptions="Start" VerticalOptions="Start" Aspect="Fill" WidthRequest="300" HeightRequest="150"></Image>
             </StackLayout>
             <ListView x:Name="infoList" VerticalOptions="CenterAndExpand"
               SeparatorVisibility="None"
@@ -20,7 +19,6 @@
                         <ViewCell>
                             <ViewCell.View>
                                 <Label Text="{Binding Title}" FontSize="21" TextColor="#cc0061" HeightRequest="35"/>
-                                <!--<Image Source="{Binding Image}" WidthRequest="35" HeightRequest="35" Aspect="AspectFit" ></Image>-->
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>

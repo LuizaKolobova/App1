@@ -28,14 +28,12 @@ namespace App1
             InitializeComponent();
             Information = new List<MasterPageItem>
                 {
-                    new MasterPageItem {Title="   Главная", TargetType=typeof(DetailPage)},
-                    new MasterPageItem {Title="   Новости", TargetType = typeof(News)},
-                    new MasterPageItem {Title="   Мероприятия",TargetType = typeof(Events)},
+                    new MasterPageItem {Title="   Лента", TargetType=typeof(DetailPage)},
+                    new MasterPageItem {Title="   События",TargetType = typeof(Events)},
                     new MasterPageItem {Title="   Направления", TargetType = typeof(Directions)},
-                    new MasterPageItem {Title="   Информация",TargetType = typeof(Info)},
-                    new MasterPageItem {Title="   Настройки",TargetType = typeof(Settings)},
                     new MasterPageItem {Title="   Мои предложения",TargetType = typeof(MyOffers)},
                     new MasterPageItem {Title="   Избранное",TargetType = typeof(Likes)},
+                    new MasterPageItem {Title="   Настройки",TargetType = typeof(Settings)},
                     new MasterPageItem {Title="   Авторизация",TargetType = typeof(Authorization)}
 
                 };

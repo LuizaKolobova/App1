@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1;
 
 namespace App1
 {
@@ -14,7 +15,8 @@ namespace App1
          
         public MainPage()
         {
-            InitializeComponent();
+            //InitializeComponent();
+
             MasterPage masterPage = new MasterPage();
             Master = masterPage;
             Detail = new NavigationPage(new DetailPage())
@@ -22,20 +24,17 @@ namespace App1
                 BarBackgroundColor = Color.FromHex("#cc0061")
             };
             masterPage.ListView.ItemSelected += SelectedItem;
-
-            //MasterPage.infoList.ItemSelected += SelectedItem;
-            //MasterPage
+            
 
             void SelectedItem(object sender, SelectedItemChangedEventArgs e)
             {
-                var item = e.SelectedItem as MasterPageItem;
-                if (item != null)
+                if (e.SelectedItem is MasterPageItem item)
                 {
                     Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType))
                     {
                         BarBackgroundColor = Color.FromHex("#cc0061")
                     };
-                    
+
                     masterPage.ListView.SelectedItem = null;
                     IsPresented = false;
                 }

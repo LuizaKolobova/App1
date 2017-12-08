@@ -5,10 +5,16 @@
              Title="Авторизация">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Если Вы являетесь одним из администраторов приложения, Вы можете войти для редактирования информации!" FontSize="20" TextColor="#cc0061" XAlign="Center" 
+            <Label Text="Вход для администраторов приложения" FontSize="20" TextColor="#cc0061" XAlign="Start" 
                 VerticalOptions="Start"
                 HorizontalOptions="CenterAndExpand" />
-            <Label Text="Здесь будет логин и пароль, предварительно они будут внесены в базу "></Label>
+            <Label Text="Если Вы являетесь одним из администраторов приложения, Вы можете войти для редактирования информации!" FontSize="17" XAlign="Center" 
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Логин и пароль предварительно внесены в базу "></Label>
+            <Entry x:Name="login" Placeholder="Логин"></Entry>
+            <Entry x:Name="password" Placeholder="Пароль" IsPassword ="True"></Entry>
+            <Button x:Name="signin" Text="Вход" Clicked="Signin"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

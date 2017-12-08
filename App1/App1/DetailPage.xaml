@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1;assembly:App1"
              x:Class="App1.DetailPage"
-             Title="UrFU Activ">
+             Title="Лента">
     <TabbedPage.Children >
         <local:NewsList />
         <local:EventsList  />
