@@ -16,7 +16,7 @@ namespace App1
         public MainPage()
         {
             //InitializeComponent();
-
+            
             MasterPage masterPage = new MasterPage();
             Master = masterPage;
             Detail = new NavigationPage(new DetailPage())

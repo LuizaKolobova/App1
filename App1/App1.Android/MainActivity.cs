@@ -10,6 +10,7 @@ using App1.Droid;
 using System.IO;
 using Xamarin.Forms;
 
+ 
 namespace App1.Droid
 {
 
@@ -33,5 +34,7 @@ namespace App1.Droid
             LoadApplication(new App1.App());
         }
     }
+
+    
 }
 

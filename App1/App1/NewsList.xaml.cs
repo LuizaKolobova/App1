@@ -21,10 +21,13 @@ namespace App1
     {
 
         public List<Phone> Phones { get; set; }
+         
         public NewsList()
         {
 
             InitializeComponent();
+            //для обновления
+            phonesList.IsPullToRefreshEnabled = true;
             Phones = new List<Phone>
             {
                 new Phone {Title="Galaxy S8", Company="Samsung", Price=48000 },

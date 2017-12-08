@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using SQLite;
 using Xamarin.Forms;
 
 namespace App1
 {
-    
-    public partial class App : Application
+        public partial class App : Application
 	{
         
         public App ()
